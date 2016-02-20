@@ -1,0 +1,19 @@
+<%= form_for([@recipe, @recipe.ingredients.build]) do |f| %>
+<p>
+  <%= f.label :qty %><br>
+  <%= f.text_field :qty %>
+</p>
+<p>
+  <%= f.label :unit %><br>
+  <%= f.text_field :unit %>
+</p>
+<p>
+  <%= f.label :product %><br>
+  <%= collection_select(:ingredient, :product_id, Product.all, :id, :name) %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+
+

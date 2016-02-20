@@ -1,0 +1,10 @@
+<% @product = Product.find(ingredient.product_id) %>
+<li>
+<%= ingredient.qty %> <%=ingredient.unit%><%= 
+" of" unless ingredient.unit.nil? or ingredient.unit.empty?%> <%= @product.name %> <%= 
+link_to 'Delete Ingredient', [ingredient.recipe, ingredient],
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+</li>
+
+
