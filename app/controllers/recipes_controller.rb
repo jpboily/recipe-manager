@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
   def index
     @recipes = Recipe.all
   end
@@ -45,6 +47,6 @@ class RecipesController < ApplicationController
 
   private
     def recipe_params
-      params.require(:recipe).permit(:title, :source, :directions)
+      params.require(:recipe).permit(:title, :source, :directions, :review)
     end
 end

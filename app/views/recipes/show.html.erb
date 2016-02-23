@@ -9,6 +9,11 @@
 </p>
 
 <p>
+  <strong>Review:</strong>
+  <% (1..@recipe.review).each do |i| %>
+      *
+  <% end %>
+<p>
   <strong>Directions:</strong>
     <%= @recipe.directions %>
 </p>
