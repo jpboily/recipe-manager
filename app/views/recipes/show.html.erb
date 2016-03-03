@@ -1,3 +1,5 @@
+<% provide(:title, "Recipe Details") %>
+
 <p>
   <strong>Title:</strong>
     <%= @recipe.title %>
@@ -10,7 +12,7 @@
 
 <p>
   <strong>Review:</strong>
-  <% (1..@recipe.review).each do |i| %>
+  <% (1..@recipe.review).each do %>
       *
   <% end %>
 <p>
