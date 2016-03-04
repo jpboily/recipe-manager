@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to image_tag("icon.png", alt: "Recipe logo"), '/', id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",     '/' %></li>
+        <li><%= link_to "Recipes",  recipes_path %></li>
+        <li><%= link_to "Products", products_path %></li>
+        <li><%= link_to "Help",     help_path%></li>
+        <!-- TODO : Update with login_path when controller is done -->
+        <!li><%= link_to "Log in",   login_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
