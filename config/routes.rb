@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   
   resources :products
 
+  resources :users
+
 
 
   # Example of regular route:
