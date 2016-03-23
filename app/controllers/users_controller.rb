@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to Recipe Manager, #{@user.name}!"
       redirect_to @user
     else
